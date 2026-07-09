@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LakelandFinds — Local Business Directory for Lakeland, FL
+
+A Yelp-style local business directory built with Next.js, focused on Lakeland, Florida. Residents browse and discover local businesses by category; business data is seeded and enriched through automated pipelines.
+
+## Features
+
+- Business listings organized by category for the Lakeland market
+- Search and browse experience built on the Next.js App Router
+- Database-backed listings with automated seeding (`seed.ts`) and standalone data enrichment (`enrich-standalone.ts`)
+- Container-ready deployment (`Dockerfile` included)
+
+## Tech Stack
+
+- **Framework:** Next.js (App Router) + TypeScript
+- **Styling:** Tailwind CSS
+- **Database:** Drizzle ORM (`drizzle.config.ts`)
+- **Infra:** Docker, environment-based config (`.env.example`)
+
+## Project Structure
+
+```
+app/          — routes and pages (Next.js App Router)
+components/   — shared UI components
+hooks/        — custom React hooks
+lib/          — utilities and data access
+scripts/      — operational scripts
+seed.ts       — database seeding
+enrich-standalone.ts — business data enrichment pipeline
+```
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+cp .env.example .env   # fill in your database credentials
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## About
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built by World Unities LLC as part of a portfolio of local-market web platforms for Central Florida. See more at [github.com/danieljames-dev](https://github.com/danieljames-dev).
