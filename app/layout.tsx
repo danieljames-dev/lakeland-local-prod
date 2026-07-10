@@ -51,6 +51,21 @@ export default function RootLayout({
             gtag('config', 'G-SZWJKJNSZ9');
           `}
         </Script>
+        <Script id="ld-website" type="application/ld+json" strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "LakelandFinds",
+            "url": "https://lakelandfinds.com/",
+            "description": "Lakeland's local business directory — discover, compare, and connect with local businesses in Lakeland, FL.",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": { "@type": "EntryPoint", "urlTemplate": "https://lakelandfinds.com/search?q={search_term_string}" },
+              "query-input": "required name=search_term_string"
+            },
+            "publisher": { "@type": "Organization", "name": "LakelandFinds", "url": "https://lakelandfinds.com/" }
+          }) }}
+        />
       </head>
       <body className={cn(inter.variable, "font-sans min-h-screen antialiased flex flex-col")}>
         <Header />
